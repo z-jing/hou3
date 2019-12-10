@@ -1,0 +1,28 @@
+/*
+* @Author: zj
+* @Date:   2019-08-21
+* @Last Modified by:   zj
+* @Last Modified time: 2019-08-21
+*/
+//主题色
+$themeColor               :#4eb8b5;
+
+@mixin ellipsis($w:auto) {
+  width: $w;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+
+/*多行文本溢出*/
+
+@mixin ellipsisLn($line) {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
