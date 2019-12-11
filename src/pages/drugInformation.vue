@@ -6,11 +6,11 @@
         </div>
 
         <div v-if="loading">
-            <img src="@/assets/images/loading.gif" alt="" class="loading_img">
+            <img src="" alt="" class="loading_img">
         </div>
         <div v-else>
             <div class="info_div" v-if="JSON.stringify(info) !=='{}'">
-                <h4 class="orange" v-if="info.numberVerify > 1"><img src="@/assets/images/warning.jpeg" alt="" style="width: 20px;
+                <h4 class="orange" v-if="info.numberVerify > 1"><img src="" alt="" style="width: 20px;
     vertical-align: middle;margin-bottom: 5px"> 提醒！该防伪码已被多次查询，谨防假冒！<br/>
                     本次是第{{info.numberVerify || 'n'}}次查询，首次防偽查詢日期 ：{{info.firstTime || '無'}}</h4>
                 <h4 class="orange" v-else>首次防偽查詢日期 ：{{info.firstTime || '無'}}</h4>

@@ -15,12 +15,12 @@ const routes = [
         component: () => import('../pages/index')
     },
     {
-        path: '/aboutUs',
-        name: 'aboutUs',
+        path: '/oneStep',
+        name: 'oneStep',
         meta: {
-            title: '关于我们'
+            title: '首页'
         },
-        component: () => import('../pages/aboutUs/aboutUs')
+        component: () => import('../pages/oneStep')
     },
     {
         path: '/security/check/:param',

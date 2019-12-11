@@ -16,16 +16,16 @@
                 </div>
             </div>
 
-            <div class="navBar">
-                <div class="logo">
-                    <router-link to="index">
-                        <img class="logo" src="@/assets/images/logo.png" alt="弘辰動物保健">
-                    </router-link>
-                </div>
-                <div class="about_us">
-                    <router-link to="/aboutUs">關於我們</router-link>
-                </div>
-            </div>
+            <!--<div class="navBar">-->
+                <!--<div class="logo">-->
+                    <!--<router-link to="index">-->
+                        <!--<img class="logo" src="@/assets/images/logo.png" alt="弘辰動物保健">-->
+                    <!--</router-link>-->
+                <!--</div>-->
+                <!--<div class="about_us">-->
+                    <!--<router-link to="/aboutUs">關於我們</router-link>-->
+                <!--</div>-->
+            <!--</div>-->
         </header>
     </div>
 </template>

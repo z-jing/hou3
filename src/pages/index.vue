@@ -1,31 +1,38 @@
 <template>
     <div class="home">
-        <img width="100%" src="@/assets/images/banner.png" alt="">
-        <!--<div class="example_exhibit">-->
-            <!--<div>-->
-                <!--<img src="@/assets/images/index-img-1.jpg" alt="">-->
-                <!--<p>處方.指示用藥</p>-->
-            <!--</div>-->
-            <!--<div>-->
-                <!--<img src="@/assets/images/index-img-2.jpg" alt="">-->
-                <!--<p>機能食品</p>-->
-            <!--</div>-->
-            <!--<div>-->
-                <!--<img src="@/assets/images/index-img-3.jpg" alt="">-->
-                <!--<p>醫材.用品</p>-->
-            <!--</div>-->
-        <!--</div>-->
-        <div class="about_us">
-            <Row class="about_us_box">
-                <Col span="11">
-                <h2 class="about_us_title">關於弘辰動物保健</h2>
-                <span class="about_us_text">ABOUT US</span>
-                <p class="about_us_content">
-                    本公司全稱：台灣弘辰動物藥品有限公司，成立於2019年，所營產品涵蓋了動物食品批發、藥品批發、用品批發等進口為主。初服用之外，台灣弘辰動物藥品有限公司還提供管理服務、仲介服務等優質服務。與NISSIN, Teika , Boise 等世界知名藥廠保持良好合作關係，且積極登記學名藥許可證和健康補充品以提升動物健康水準。
+        <img width="100%" src="@/assets/images/index1.png" alt="">
+
+        <Row class="pd-l bg-gray">
+            <p style="margin: 15px">您購買的產品經系統比對判斷為<strong>正品</strong></p>
+            <p style="margin: 15px">歡迎點擊“下一步”按鈕了解更多真偽辨別方法。</p>
+            <div style="text-align: center;">
+                <img src="@/assets/images/getImg3.png" alt="">
+            </div>
+            <div align="center">
+                <Button @click="nextStep">下一步</Button>
+            </div>
+        </Row>
+
+        <div class="footer_content">
+            <Row class="pd-l">
+                <p>
+                    <span>
+                        耀月企業股份有限公司 原廠資訊<br>
+                        電話：+886 8 7620150&nbsp;<br>　　　
+                        +886 8 7620151<br>
+                        E-mail：<a href="mailto:service@brimoon.com">service@brimoon.com</a><br>
+                        微信號：tel-88687620150<br>
+                        地址：屏東縣長治鄉農園路5號(台灣農業生物科技園區)
+                    </span>
                 </p>
+            </Row>
+            <Row class="bg-gray pd-l">
+                <Col span="7">
+                <img src="@/assets/images/footer1.png" style="max-width: 100%; height:auto;">
                 </Col>
-                <Col span="11" offset="2">
-                <img width="100%" src="@/assets/images/logowithback.png" alt="">
+                <Col span="16" offset="1">
+                <div><span style="font-size:16px;">1. “<img src="@/assets/images/getImg5.png" style="max-width:30px;vertical-align: middle;">”為360°全可視水晶立體浮雕效果，內有光圈會隨著燈光的移動而移動。 (假標模糊無立體感，無360°全可視效果，不會隨著光線變化。)</span></div>
+                <div><span style="font-size:16px;">2. “BRIMOON”隨著燈光移動逐漸改變大小。 (假標BRIMOON非常粗糙、網點大、變化死板不會逐漸改變大小。)</span></div>
                 </Col>
             </Row>
         </div>
@@ -45,51 +52,25 @@
 
         },
         methods: {
-
+            nextStep(){
+                this.$router.push({path: '/oneStep'});
+            },
         }
     }
 </script>
 <style lang="scss" scoped>
-     .example_exhibit,.about_us_box {
-         width: 85%;
-         margin: 25px auto;
-     }
-    .example_exhibit {
-        display: flex;
-        justify-content: space-between;
-        padding: 60px 0;
-        &>div{
-            display: inline-block;
-            width: 28%;
-            text-align: center;
-        }
-        img{
-            width: 350px;
-            height:260px;
-        }
-        p{
-            font-size: 20px;
-            margin-top: 10px;
-        }
+    .home {
+        width: 80%;
+        margin: auto;
+        padding-left: 15px;
+        padding-right: 15px;
     }
-    .about_us {
-        background-color: #f7f8f8;
-        padding: 20px 0;
+    .pd-l{
+        padding: 30px;
+        color: #333;
+        font-size:16px;
     }
-    .about_us_title {
-        font-size: 26px;
-        margin-bottom: 10px;
-    }
-    .about_us_text {
-        border-bottom: 2px solid $themeColor;
-        margin-bottom: 10px;
-        display: inline-block;
-        font-size: 18px;
-        color: #b3afaf;
-        padding-bottom: 10px;
-    }
-    .about_us_content {
-        line-height: 2.5;
-        font-size: 16px;
+    .bg-gray {
+        background-color: #ced8e1;
     }
 </style>
