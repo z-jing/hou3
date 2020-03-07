@@ -1,6 +1,13 @@
 <template>
     <div class="home">
-        <img width="100%" src="@/assets/images/index1.png" alt="">
+        <Carousel loop>
+            <CarouselItem>
+                <img width="100%" src="@/assets/images/banner1.png" alt="">
+            </CarouselItem>
+            <CarouselItem>
+                <img width="100%" src="@/assets/images/banner2.png" alt="">
+            </CarouselItem>
+        </Carousel>
 
         <Row class="pd-l bg-gray">
             <p style="margin: 15px">您購買的產品經系統比對判斷為<strong>正品</strong></p>

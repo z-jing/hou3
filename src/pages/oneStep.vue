@@ -6,7 +6,7 @@
         </Row>
         <p class="text-bold">A.“<img src="@/assets/images/getImg5.png" style="max-width:30px;vertical-align: middle;">”中的光圈隨著燈光的移動而移動，不管從每一個角度看皆清晰立體</p>
         <p class="text-bold">B.“BRIMOON”隨著燈光移動逐漸改變大小。</p>
-        <RadioGroup v-model="vertical" vertical>
+        <RadioGroup v-model="vertical" vertical class="radio-wrapper">
             <Radio label="apple">
                 <Icon type="A"></Icon>
                 <span>只看見A效果</span>
@@ -24,6 +24,9 @@
                 <span>無看見任何效果</span>
             </Radio>
         </RadioGroup>
+        <div style="text-align: center">
+            <Button type="primary" @click="sendData">提交</Button>
+        </div>
     </div>
 </template>
 <script>
@@ -40,9 +43,9 @@
 
         },
         methods: {
-            nextStep(){
-//                this.$router.push({path: '/oneStep'});
-            },
+            sendData(){
+                this.$router.push({path: '/oneStep'});
+            }
         }
     }
 </script>
@@ -57,6 +60,12 @@
     }
     .text-bold {
         font-weight: bolder;
-        margin: 10px 0;
+        margin-top: 30px;
+    }
+    .radio-wrapper {
+        .ivu-radio-wrapper{
+            font-size: 16px;
+            margin: 10px 0;
+        }
     }
 </style>
